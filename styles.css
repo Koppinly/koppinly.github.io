@@ -1,0 +1,187 @@
+:root {
+    --font-family: "JetBrains Mono", monospace;
+    --line-height: 1.20rem;
+    --border-thickness: 2px;
+    --text-color: #000000;
+    --text-color-alt: #666;
+    --background-color: #d3d3d3;
+    --background-color-alt: #eee;
+    --font-weight-normal: 500;
+    --font-weight-medium: 600;
+    --font-weight-bold: 800;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 80ch;
+    margin: 0 auto !important; /* Added !important */
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.header {
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.header th,
+.header td {
+    border: var(--border-thickness) solid var(--text-color);
+    padding: 8px;
+    text-align: left;
+    min-height: 40px;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: var(--text-color-alt);
+}
+
+main {
+    flex: 1;
+    max-height: calc(100vh - 100px);
+    padding-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.gamebox {
+    margin: 1rem;
+}
+
+
+.right-align {
+    text-align: right;
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        padding: 0 1rem;
+    }
+    .header {
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    body {
+        padding: 0 0.5rem;
+    }
+    .header {
+        width: calc(100% - 1rem);
+        margin-top: 2rem;
+    }
+    .header th,
+    .header td {
+        font-size: 14px;
+    }
+    .title {
+        font-size: 1rem;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.code, kbd, samp {
+    font-family: "JetBrains Mono", monospace !important;
+    font-size: 1em;
+}
+
+.flex-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Optional: To add some spacing between the columns */
+.lists {
+    margin-top: 1rem; /* Adjust as needed */
+}
+
+.nes-list {
+    margin-right: 1rem; /* Optional spacing between the list and bubble */
+    margin-top: 1rem;
+}
+
+.space-y-1\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(.375rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(.375rem * var(--tw-space-y-reverse));
+}
+
+.text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+}
+
+.text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+.font-mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+.pt-1 {
+    padding-top: .25rem;
+}
+
+.gap-x-1 {
+    -moz-column-gap: .25rem;
+    column-gap: .25rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.about {
+    margin-bottom: 1rem;
+}
+
+.game_info {
+    margin-top: 10px;
+}
+
+.copyright {
+    padding: 1rem;
+    justify-content: center;
+    display: flex;
+}
+
+.main {
+    margin-top: 1rem;
+}
+
+.resume {
+    display: flex;
+    
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-bit Site</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="nes.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    
+
+</head>
+<body>
+    <table class="header w-100">
+        <tbody>
+            <tr>
+                <td colspan="2" rowspan="2" class="align-middle">
+                    <!-- Title and Balloon in the same cell -->
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h1 class="title">seecloud</h1>
+                        <div class="nes-balloon from-left nes-pointer">Let's Play!</div>
+                    </div>
+                    <span class="subtitle">retro-future design</span>
+                </td>
+                <th>Version</th>
+                <td class="width-min">v1.1.0</td>
+            </tr>
+            <tr>
+                <th>Updated</th>
+                <td class="width-min"><time>2024-09-10</time></td>
+            </tr>
+            <tr>
+                <th class="width-min">Author:</th>
+                <td class="width-auto"><a href="#"><cite>Connor Koppin</cite></a></td>
+                <th class="width-min">License</th>
+                <td>...</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <main>
+        <div class="main flex items-start space-y-1.5">
+            <div class="flex-1">
+                <h1 class="text-2xl font-bold is-primary nes-text">Connor Koppin</h1>
+                <p class="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+                    Application Support Engineer with a proven track record in diagnosing and resolving technical issues for enterprise clients. Specialized in troubleshooting complex incidents and improving internal processes.
+                </p>
+                
+                <div class="d-flex align-items-center gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+                    <a href="mailto:connor.koppin@gmail.com" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
+                        <i class="fas fa-envelope fa-2x"></i>
+                    </a>
+
+                    <!-- The Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+                    <a href="tel:+164143043936" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
+                        <i class="fa-solid fa-square-phone-flip fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/koppinly" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
+                        <i class="fa-brands fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/connor-koppin-48284496/" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
+                        <i class="fa-brands fa-linkedin fa-2x"></i>
+                    </a>
+            
+                    <a href="resource/Connor Koppin Resume.pdf" target="_blank">
+                        <button class="resume nes-btn is-warning ml-2">Résumé</button>
+                    </a>
+                </div>
+            </div>
+          
+            <!-- Headshot aligned to the right -->
+            <div class="flex-shrink-0">
+                <img src="resource/Connor Koppin Headshot copy.JPEG" 
+                     alt="Headshot" 
+                     class="img-fluid rounded-full object-cover img-thumbnail rounded float-start headshot">
+            </div>
+          </div>
+
+          <h1 class="text-2xl font-bold">SEE CLOUD APPS</h1>
+<a href="https://koppinly.github.io/react-sdk/" target="_blank" style="text-decoration: none;">
+    <button type="button" class="game_title nes-btn is-success mb-4">Greenlight</button>
+</a>
+<a href="Snake/snake.html" target="_blank">
+    <button type="button" class="game_title nes-btn is-primary mb-4">Snake</button>
+</a>
+<a href="optimizely-tester/index.html" target="_blank">
+    <button type="button" class="game_title nes-btn is-warning mb-4">Optimizely Tester</button>
+</a>
+<section class="nes-container with-title">
+    <h2 class="title nes-balloon">Feature Experimentation</h2>
+    <div class="lists">
+        <div class="flex-container">
+            <ul class="nes-list is-disc">
+                <li>Above are a few games.</li>
+                <li>They all run on feature flags.</li>
+                <li>They all are built with Optimizely FX.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<p class="copyright">© 2024 seecloud</p>
+    </main>
+</body>
+</html>
