@@ -4,134 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8-bit Site</title>
+    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="nes.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-    
-
+    <script src="https://cdn.optimizely.com/js/4802505738027008.js"></script>
 </head>
-<body>
-    <table class="header w-100">
-        <tbody>
-            <tr>
-                <td colspan="2" rowspan="2" class="align-middle">
-                    <!-- Title and Balloon in the same cell -->
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h1 class="title">seecloud</h1>
-                        <div class="nes-balloon from-left nes-pointer">Let's Play!</div>
-                    </div>
-                    <span class="subtitle">retro-future design</span>
-                </td>
-                <th>Version</th>
-                <td class="width-min">v1.1.0</td>
-            </tr>
-            <tr>
-                <th>Updated</th>
-                <td class="width-min"><time>2024-09-10</time></td>
-            </tr>
-            <tr>
-                <th class="width-min">Author:</th>
-                <td class="width-auto"><a href="#"><cite>Connor Koppin</cite></a></td>
-                <th class="width-min">License</th>
-                <td>...</td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <main>
-        <div class="main flex items-start space-y-1.5">
-            <div class="flex-1">
-                <h1 class="text-2xl font-bold is-primary nes-text">Connor Koppin</h1>
-                <p class="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-                    Application Support Engineer with a proven track record in diagnosing and resolving technical issues for enterprise clients. Specialized in troubleshooting complex incidents and improving internal processes.
-                </p>
-                
-                <div class="d-flex align-items-center gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
-                    <a href="mailto:connor.koppin@gmail.com" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
-                        <i class="fas fa-envelope fa-2x"></i>
-                    </a>
-
-                    <!-- The Modal -->
-<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" id="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-                    <a href="tel:+164143043936" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
-                        <i class="fa-solid fa-square-phone-flip fa-2x"></i>
-                    </a>
-                    <a href="https://github.com/koppinly" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
-                        <i class="fa-brands fa-github fa-2x"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/connor-koppin-48284496/" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground size-8">
-                        <i class="fa-brands fa-linkedin fa-2x"></i>
-                    </a>
-            
-                    <a href="resource/Connor Koppin Resume.pdf" target="_blank">
-                        <button class="resume nes-btn is-warning ml-2">Résumé</button>
-                    </a>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Container for Content -->
+    <div class="container flex-grow-1" style="max-width: 1000px;">
+     <!-- New Header Section -->
+     <header class="global-header container-fluid px-4 py-3">
+        <nav class="row d-flex justify-content-between align-items-center position-relative">
+            <!-- Left Section - Branding -->
+            <div class="col-4 branding-section">
+                <div class="d-flex align-items-center gap-3">
+                    <h1 class="brand-title mb-0">SEECLOUD</h1>
+                    <span class="version-badge">v1.1.1</span>
                 </div>
             </div>
-          
-            <!-- Headshot aligned to the right -->
-            <div class="flex-shrink-0">
-                <img src="resource/Connor Koppin Headshot copy.JPEG" 
-                     alt="Headshot" 
-                     class="img-fluid rounded-full object-cover img-thumbnail rounded float-start headshot">
+    
+            <!-- Centered Navigation Widget -->
+            <div class="col-4 nav-widget text-center">
+                <span class="menu-trigger">
+                    Explore
+                    <i class="fas fa-chevron-down ms-1"></i>
+                </span>
+                <ul class="nav-menu">
+                    <li><a href="#page1" class="nav-link">page 1</a></li>
+                    <li><a href="#page2" class="nav-link">page 2</a></li>
+                    <li><a href="#page3" class="nav-link">page 3</a></li>
+                </ul>
             </div>
-          </div>
+    
+            <!-- Right Section - Metadata -->
+            <div class="col-4 metadata-section">
+                <div class="d-flex flex-column align-items-end">
+                    <span class="metadata-item">
+                        Updated: <time>2025-01-31</time>
+                    </span>
+                    <span class="metadata-item">
+                        Author: <a href="#" class="author-link">Connor Koppin</a>
+                    </span>
+                    <span class="metadata-item">
+                        License: <span class="license-status">Open</span>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Decorative line -->
+        <div class="header-line mt-3"></div>
+    </header>
+    
 
-          <h1 class="text-2xl font-bold">SEE CLOUD APPS</h1>
-<a href="https://koppinly.github.io/react-sdk/" target="_blank" style="text-decoration: none;">
-    <button type="button" class="game_title nes-btn is-success mb-4">Greenlight</button>
-</a>
-<a href="Snake/snake.html" target="_blank">
-    <button type="button" class="game_title nes-btn is-primary mb-4">Snake</button>
-</a>
-<a href="optimizely-tester/index.html" target="_blank">
-    <button type="button" class="game_title nes-btn is-warning mb-4">Optimizely Tester</button>
-</a>
-<section class="nes-container with-title">
-    <h2 class="title nes-balloon">Feature Experimentation</h2>
-    <div class="lists">
-        <div class="flex-container">
-            <ul class="nes-list is-disc">
-                <li>Above are a few games.</li>
-                <li>They all run on feature flags.</li>
-                <li>They all are built with Optimizely FX.</li>
-            </ul>
+        <!-- Main Content -->
+        <main class="overflow-auto flex-grow-1 pt-2">
+            <div class="row mb-2">
+                <!-- Bio and Info Section -->
+                <div class="col-md-8 order-2 order-md-1">
+                    <h1 class="text-2xl font-bold is-primary nes-text">Connor Koppin</h1>
+                    <p class="text-pretty font-mono text-sm text-muted-foreground mb-3">
+                        Application Support Engineer with a proven track record in diagnosing and resolving technical issues for enterprise clients. Specialized in troubleshooting complex incidents and improving internal processes.
+                    </p>
+                    
+                    <!-- Résumé Button -->
+                    <a href="resource/Connor Koppin Resume.pdf" target="_blank" class="d-inline-block mb-3">
+                        <button class="resume nes-btn is-warning">Résumé</button>
+                    </a>
+                    <div class="apps-container mt-3">
+                        <h1 class="text-xl font-bold mb-3">APPS</h1>
+                        <div class="d-flex justify-content-between flex-wrap gap-3">
+                    <div class="d-flex justify-content-between flex-wrap gap-4">
+                        <a href="https://koppinly.github.io/react-sdk/" target="_blank" style="text-decoration: none;">
+                            <button type="button" class="game_title nes-btn is-success mb-2">Greenlight</button>
+                        </a>
+                        <a href="Snake/snake.html" target="_blank">
+                            <button type="button" class="game_title nes-btn is-primary mb-2">Snake</button>
+                        </a>
+                        <a href="optimizely-tester/index.html" target="_blank">
+                            <button type="button" class="game_title nes-btn is-warning mb-2">Optimizely Tester</button>
+                        </a>
+                    </div>
+                
+            
+                    </div>
+        
+                    <section class="nes-container with-title mt-2">
+                        <h2 class="title nes-balloon">Feature Experimentation</h2>
+                        <ul class="nes-list is-disc">
+                            <li>Above are a few games.</li>
+                            <li>They all run on feature flags.</li>
+                            <li>They all are built with Optimizely FX.</li>
+                        </ul>
+                    </section>
+                </div>
+
+               
+            </div>
+             <!-- Image & Social Icons Section -->
+             <div class="col-md-4 order-1 order-md-2">
+                <div class="d-flex flex-column align-items-center">
+                    <!-- Profile Image -->
+                    <img src="resource/Connor Koppin Headshot copy.JPEG" alt="Headshot" 
+                         class="img-fluid mb-3 profile-image">
+                    
+                    <!-- Social Icons Grid -->
+                    <div class="social-icons-grid">
+                        <a href="mailto:connor.koppin@gmail.com" class="icon-btn nes-btn is-error">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+164143043936" class="icon-btn nes-btn is-primary">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="https://github.com/koppinly" class="icon-btn nes-btn is-success">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/connor-koppin-48284496/" class="icon-btn nes-btn is-warning">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="mt-auto">
+            <p class="copyright text-center py-3">© 2024 seecloud</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-</section>
-<p class="copyright">© 2024 seecloud</p>
-    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
