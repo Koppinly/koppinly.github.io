@@ -1,0 +1,3 @@
+[submodule "Greenlight"]
+	path = Greenlight
+	url = https://github.com/koppinly/react-sdk.git
