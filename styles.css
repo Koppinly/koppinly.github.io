@@ -63,6 +63,7 @@ main {
     flex: 1;
     overflow-y: auto;
     padding-bottom: 1rem;
+    
 }
 
 footer {
@@ -366,11 +367,10 @@ footer {
 
 @media (max-width: 992px) {
     .nav-widget {
-        position: static;
-        transform: none;
-        order: 3;
-        width: 100%;
-        margin-top: 1rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
     }
     .nav-menu {
         left: 0;

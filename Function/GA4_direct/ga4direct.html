@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See Cloud</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.optimizely.com/js/4802505738027008.js"></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-81FTRPLHVK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-81FTRPLHVK');
+</script>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Container for Content -->
+    <div class="container flex-grow-1" style="max-width: 1000px;">
+        <!-- New Header Section -->
+        <header class="global-header container-fluid px-4 py-3">
+            <nav class="row d-flex justify-content-between align-items-center position-relative">
+                <!-- Left Section - Branding -->
+                <div class="col-4 branding-section">
+                    <div class="d-flex align-items-center gap-3">
+                        <h1 class="brand-title mb-0">SEECLOUD!</h1>
+                        <span class="version-badge">v1.1.1</span>
+                    </div>
+                </div>
+
+                <!-- Centered Navigation Widget -->
+                <div class="nav-widget text-center">
+                    <span class="menu-trigger">
+                        Explore
+                        <i class="fas fa-chevron-down ms-1"></i>
+                    </span>
+                    <div class="nav-menu">
+                        <a href="/index.html" class="nav-link">Home</a>
+                        <a href="#page2" class="nav-link">Games</a>
+                        <a href="/Function/function.html" class="nav-link">Function</a>
+                    </div>
+                </div>
+
+                <!-- Right Section - Metadata -->
+                <div class="col-4 metadata-section">
+                    <div class="d-flex flex-column align-items-end">
+                        <span class="metadata-item">
+                            Updated: <time>2025-01-31</time>
+                        </span>
+                        <span class="metadata-item">
+                            Author: <a href="#" class="author-link">Connor Koppin</a>
+                        </span>
+                        <span class="metadata-item">
+                            License: <span class="license-status">Open</span>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Decorative line -->
+            <div class="header-line mt-3"></div>
+        </header>
+
+
+        <main class="overflow-auto flex-grow-1 pt-2">
+            <div class="row mb-2">
+                <!-- Bio and Info Section -->
+                <div class="col-md-8 order-2 order-md-1">
+                    <h1>This Page Uses GA4 via GTAG</h1>
+                    <button onclick="trackOptimizelyEvent()">Trigger Event Tracking</button>
+                </div>
+                
+        </main>
+        <footer class="mt-auto">
+            <p class="copyright text-center py-3">© 2024 seecloud</p>
+        </footer>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script>
+        function trackOptimizelyEvent() {
+            window['optimizely'] = window['optimizely'] || [];
+            window['optimizely'].push({
+                type: "event",
+                eventName: "sitewide_click",
+                tags: {
+                    revenue: 0, // Optional in cents as integer (500 == $5.00)
+                    value: 0.00 // Optional as float
+                }
+            });
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
