@@ -27,8 +27,8 @@
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V5JZ53K"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V5JZ53K" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Container for Content -->
     <div class="container flex-grow-1" style="max-width: 1000px;">
@@ -78,37 +78,84 @@
 
 
         <main class="overflow-auto flex-grow-1 pt-2">
-            <div class="row mb-2">
+            <div class="row mb-2 top-section">
                 <!-- Bio and Info Section -->
                 <div class="col-md-8 order-2 order-md-1">
                     <h1>This Page Uses GA4 via GTM</h1>
                     <button onclick="trackOptimizelyEvent()">Trigger Event Tracking</button>
-
+                    <hr>
                 </div>
+                <div class="mt-3 col-md-8 order-2 order-md-1" style="position: relative; margin-top: 20px;">
+                    <h3>Event Properties</h3>
+                    <form id="eventForm">
+                        <div class="form-group">
+                            <label for="itemName">Item Name</label>
+                            <select id="itemName" class="form-control">
+                                <option value="Shoes">Shoes</option>
+                                <option value="Shirt">Shirt</option>
+                                <option value="Hats">Hats</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="itemCategory">Color</label>
+                            <select id="itemCategory" class="form-control">
+                                <option value="Red">Red</option>
+                                <option value="Green">Green</option>
+                                <option value="Blue">Blue</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="purchaseAmount">Purchase Amount ($)</label>
+                            <input id="purchaseAmount" class="form-control" type="number" step="0.01" min="0" placeholder="0.00">
+                        </div>
+                        <button type="button" class="btn btn-primary mt-2" onclick="eventProps()">Send Event with Properties</button>
+                    </form>
+                </div>
+                
+                <script>
+                    function eventProps() {
+                        const itemName = document.getElementById('itemName').value;
+                        const itemCategory = document.getElementById('itemCategory').value;
+                        const purchaseAmountInput = document.getElementById('purchaseAmount');
+                
+                        let value = parseFloat(purchaseAmountInput.value);
+                
+                        // Ensure valid number and format it properly
+                        if (isNaN(value) || value < 0) {
+                            alert('Please enter a valid purchase amount.');
+                            return;
+                        }
+                
+                        // Convert to cents
+                        let valueInCents = Math.round(value * 100);
+                
+                        window['optimizely'] = window['optimizely'] || [];
+                        window['optimizely'].push({
+                            type: "event",
+                            eventName: "trackRevenue",
+                            tags: {
+                                revenue: valueInCents
+                            },
+                            properties: {
+                                "Item Name": itemName,
+                                "Color": itemCategory,
+                                "Purchase Amount": value.toFixed(2) // Store purchase amount in dollars (formatted)
+                            }
+                        });
+                
+                        alert(`Optimizely event sent: ${JSON.stringify({
+                            revenue: valueInCents,
+                            itemName: itemName,
+                            itemCategory: itemCategory
+                        })}`);
+                    }
+                </script>
+                
 
-        </main>
-        <footer class="mt-auto">
-            <p class="copyright text-center py-3">© 2024 seecloud</p>
-        </footer>
-    </div>
-
-    <script>
-        function trackOptimizelyEvent() {
-            window['optimizely'] = window['optimizely'] || [];
-            window['optimizely'].push({
-                type: "event",
-                eventName: "sitewide_click",
-                tags: {
-                    revenue: 0, // Optional in cents as integer (500 == $5.00)
-                    value: 0.00 // Optional as float
-                }
-            });
-        }
-    </script>
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                <!-- Bootstrap JS -->
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimizely Datafile to CSV</title>
+    <!-- Link to local CSS file -->
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        /* Container for CSV Output with horizontal scroll */
+        #csvOutput {
+    position: relative;
+    max-height: 500px;  /* Set a fixed height for the table container */
+    width: 100%;  /* Ensure the container is responsive */
+    overflow-x: scroll;  /* Always show horizontal scrollbar */
+    overflow-y: auto;  /* Enable vertical scrolling if needed */
+    padding-bottom: 10px;  /* Padding for scroll */
+    margin-top: 20px;  /* Some margin for spacing */
+    border: 1px solid #ddd;  /* Optional border around the output area */
+    display: block; /* Make sure it's block-level */
+}
+        /* Styling for table */
+        table {
+            border-collapse: collapse;
+            min-width: 100%; /* Make sure the table stretches the container width */
+            table-layout: auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            word-wrap: break-word;
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+
+        /* Optional: Styling for headers */
+        thead th {
+            background-color: #f4f4f4;
+        }
+
+        tbody {
+            overflow-x: scroll;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Optimizely Datafile to CSV Converter</h1>
+    <form id="datafileForm">
+        <label for="datafileURL">Enter Optimizely Datafile URL:</label>
+        <input type="text" id="datafileURL" placeholder="https://path.to/your/datafile.json" required>
+        <button type="submit">Convert</button>
+    </form>
+
+    <h2>CSV Output</h2>
+    <div id="csvOutput"></div> <!-- Table will be displayed here -->
+
+    <script src="datafile_gen.js"></script>
+</body>
+</html>
